@@ -7,8 +7,15 @@ describe('todo-app App', () => {
     page = new TodoAppPage();
   });
 
-  it('should display message saying app works', () => {
+  it('page has only one element with tag "H1"', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getElementsCount('h1')).toEqual(1);
+  });
+
+  it('input field has placeholder "What needs to be done?"', () => {
+    page.navigateTo();
+    page.getPlaceholderFromElement('input').then(function (placeholder) {
+      expect(placeholder).toEqual('What needs to be done?');
+    });
   });
 });
