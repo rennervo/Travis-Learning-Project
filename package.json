@@ -8,7 +8,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
+    "before:test": "webdriver-manager update --versions.chrome=2.36",
+    "e2e": "ng e2e --progress false --config protractor.conf.js --webdriver-update false",
     "json-server": "json-server --watch db.json"
   },
   "private": true,
@@ -40,7 +41,7 @@
     "karma-coverage-istanbul-reporter": "^0.2.0",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
-    "protractor": "~5.1.0",
+    "protractor": "^5.1.2",
     "todomvc-app-css": "^2.0.6",
     "todomvc-common": "^1.0.3",
     "ts-node": "~2.0.0",
