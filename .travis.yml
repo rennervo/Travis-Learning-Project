@@ -3,12 +3,14 @@ language: node_js
 node_js:
   - 8.11.2
 
+before_install:
+  - npm run start
+  - sleep 30
+
 jobs:
   include:
     - stage: build
       script: npm run build
-    - stage: start server
-      script: npm run start
     - stage: before test
       script: npm run before:test
     - stage: e2e
