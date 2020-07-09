@@ -8,6 +8,7 @@ describe('todo-app App', () => {
   });
 
   it('page has only one element with tag "H1"', () => {
+    // This comment is changes for commit
     page.navigateTo();
     expect(page.getElementsCount('h1')).toEqual(1);
   });
