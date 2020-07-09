@@ -8,8 +8,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "before:test": "webdriver-manager update --versions.chrome=2.36",
-    "e2e": "ng e2e --progress false --config protractor.conf.js --webdriver-update false",
+    "e2e": "ng e2e --config protractor.conf.js --webdriver-update false",
     "json-server": "json-server --watch db.json"
   },
   "private": true,
