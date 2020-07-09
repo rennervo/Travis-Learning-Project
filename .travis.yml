@@ -8,9 +8,10 @@ sudo: required
 addons:
   chrome: stable
 
+install:
+  - npm install
+
 jobs:
   include:
-    - stage: before test
-      script: npm run before:test
     - stage: e2e
       script: npm run e2e
