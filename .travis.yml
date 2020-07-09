@@ -3,10 +3,13 @@ language: node_js
 node_js:
   - 8.11.2
 
+sudo: required
+
+addons:
+  chrome: stable
+
 jobs:
   include:
-    - stage: build
-      script: npm run build
     - stage: before test
       script: npm run before:test
     - stage: e2e
