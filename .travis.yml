@@ -15,3 +15,7 @@ jobs:
   include:
     - stage: e2e
       script: npm run e2e
+
+branches:
+  only:
+    - release
